@@ -1,0 +1,37 @@
+package com.ganjarramadhan.bookdoctor.module.login.rest;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+/**
+ * Created by ganjarramadhan on 4/9/16.
+ */
+
+
+public class LoginRestClient {
+
+    private static LoginRestInterface REST_CLIENT;
+
+    static {
+        setupRestClient();
+    }
+
+    private LoginRestClient() {
+    }
+
+    public static LoginRestInterface get() {
+        return REST_CLIENT;
+    }
+
+    private static void setupRestClient() {
+
+        Retrofit.Builder builder = new Retrofit.Builder()
+                .baseUrl(LoginAPIURLConstant.BASE_API_LOGIN_URL)
+                .addConverterFactory(GsonConverterFactory.create());
+
+        Retrofit restAdapter = builder.build();
+        REST_CLIENT = restAdapter.create(LoginRestInterface.class);
+
+    }
+
+}
