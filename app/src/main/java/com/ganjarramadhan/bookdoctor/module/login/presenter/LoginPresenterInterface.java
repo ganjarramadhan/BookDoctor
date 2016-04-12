@@ -8,7 +8,7 @@ import com.ganjarramadhan.bookdoctor.pojo.User;
 public interface LoginPresenterInterface {
 
     void onLoginClicked(String email, String password);
-    void onSignUpClicked(User user);
-    void onForgotPasswordClicked(String email);
+    void onSignUpClicked();
+    void onForgotPasswordClicked();
 
 }

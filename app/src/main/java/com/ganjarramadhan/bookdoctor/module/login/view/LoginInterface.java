@@ -9,9 +9,7 @@ public interface LoginInterface {
 
     void onLoginFailed(String message);
     void onLoginSuccess();
-    void onSignUpFailed(String message);
-    void onSignUpSuccess();
-    void onForgotPasswordFailed();
-    void onForgotPasswordSuccess();
+    void goToSignUpScreen();
+    void goToForgotPasswordScreen();
 
 }

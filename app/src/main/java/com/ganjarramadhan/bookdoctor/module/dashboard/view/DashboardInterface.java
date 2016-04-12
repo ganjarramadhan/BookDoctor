@@ -12,5 +12,6 @@ public interface DashboardInterface {
     void onListItemClick(User user);
     void onUsersDataAvailable(List<User> userList);
     void onUsersDataNotAvailable(String message);
+    void goToLoginScreen();
 
 }

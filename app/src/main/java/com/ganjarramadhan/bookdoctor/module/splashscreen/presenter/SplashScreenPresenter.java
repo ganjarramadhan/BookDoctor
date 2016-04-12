@@ -12,7 +12,7 @@ public class SplashScreenPresenter implements SplashScreenPresenterInterface{
 
     public final static int MSG_CONTINUE = 1234;
 
-    private final static long DELAY = 5000;
+    private final static long DELAY = 3000;
     private CustomHandler customHandler;
 
     private SplashScreenInterface view;

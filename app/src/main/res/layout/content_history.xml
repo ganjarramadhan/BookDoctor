@@ -12,4 +12,9 @@
     tools:context=".module.history.view.History"
     tools:showIn="@layout/activity_history">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_history_rv_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
 </RelativeLayout>

@@ -21,4 +21,12 @@
     <string name="forgot_your_password">Forgot Your Password?</string>
     <string name="registered_email">Registered Email:</string>
     <string name="submit">Submit</string>
+    <string name="reenter_password">Reenter Password</string>
+    <string name="save">Save</string>
+    <string name="click_to_change_image">Click to change image</string>
+    <string name="leave_password_empty_if_you_are_not_about_changing_your_password">Leave password empty if you are not about changing your password</string>
+    <string name="doctors_list">Doctors List</string>
+    <string name="choose_date_label">Choose Date:</string>
+    <string name="choose_time">Choose Time:</string>
+    <string name="book_now">Book Now</string>
 </resources>

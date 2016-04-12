@@ -14,7 +14,7 @@ public class LoginModel implements LoginModelInterface {
     @Override
     public void checkUser(String email, String password, OnLoginFinishedListener listener) {
         if (email.equals("ganjar.ramadhan05@gmail.com") && password.equals("password")){
-            User user = new User(1, email, password, "Ganjar Ramadhan", "", User.TYPE_CUSTOMER);
+            User user = new User(1, email, "Ganjar Ramadhan", "", User.TYPE_CUSTOMER);
             listener.onLoginSuccess(user);
         } else {
             listener.onLoginFailed("Login Failed");

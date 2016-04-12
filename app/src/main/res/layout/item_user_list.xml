@@ -13,14 +13,16 @@
         android:orientation="vertical">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/adapter_user_list_civ_avatar"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
             android:src="@drawable/ic_stethoscope_green"
             app:civ_border_width="2dp"
             app:civ_border_color="@color/colorAccent"
             android:layout_gravity="center"/>
 
         <TextView
+            android:id="@+id/adapter_user_list_tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="2"

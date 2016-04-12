@@ -10,5 +10,6 @@ import java.util.List;
 public interface DashboardPresenterInterface {
 
     void loadUsers();
+    void goToLogin();
 
 }

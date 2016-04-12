@@ -15,26 +15,28 @@ public class User {
     public static final String TYPE_CUSTOMER = "customer";
 
     @SerializedName("id")
-    private int id;
+    int id;
 
     @SerializedName("email")
-    private String email;
+    String email;
 
-    private String password;
+    String password;
 
     @SerializedName("full_name")
-    private String fullName;
+    String fullName;
 
     @SerializedName("avatar_url")
-    private String avatarUrl;
+    String avatarUrl;
 
     @SerializedName("type")
-    private String type;
+    String type;
 
-    public User(int id, String email, String password, String fullName, String avatarUrl, String type) {
+    public User() {
+    }
+
+    public User(int id, String email, String fullName, String avatarUrl, String type) {
         this.id = id;
         this.email = email;
-        this.password = password;
         this.fullName = fullName;
         this.avatarUrl = avatarUrl;
         this.type = type;

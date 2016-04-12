@@ -29,13 +29,13 @@ public class LoginPresenter implements LoginPresenterInterface, OnLoginFinishedL
     }
 
     @Override
-    public void onSignUpClicked(User user) {
-
+    public void onSignUpClicked() {
+        if (null != view.get()) view.get().goToSignUpScreen();
     }
 
     @Override
-    public void onForgotPasswordClicked(String email) {
-
+    public void onForgotPasswordClicked() {
+        if (null != view.get()) view.get().goToForgotPasswordScreen();
     }
 
     @Override

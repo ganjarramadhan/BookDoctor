@@ -1,5 +1,6 @@
 package com.ganjarramadhan.bookdoctor.module.login.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
@@ -12,7 +13,9 @@ import android.widget.TextView;
 
 import com.ganjarramadhan.bookdoctor.BuildConfig;
 import com.ganjarramadhan.bookdoctor.R;
+import com.ganjarramadhan.bookdoctor.module.forgotpassword.view.ForgotPassword;
 import com.ganjarramadhan.bookdoctor.module.login.presenter.LoginPresenter;
+import com.ganjarramadhan.bookdoctor.module.signup.view.SignUp;
 import com.ganjarramadhan.bookdoctor.util.AppsUtil;
 
 import butterknife.Bind;
@@ -77,13 +80,13 @@ public class Login extends AppCompatActivity implements LoginInterface {
     }
 
     @OnClick(R.id.activity_login_tv_sign_up)
-    public void signUp(){
-
+    public void signUp(View v){
+        presenter.onSignUpClicked();
     }
 
     @OnClick(R.id.activity_login_tv_forgot_password)
     public void forgotPassword(){
-
+        presenter.onForgotPasswordClicked();
     }
 
     @Override
@@ -97,22 +100,14 @@ public class Login extends AppCompatActivity implements LoginInterface {
     }
 
     @Override
-    public void onSignUpFailed(String message) {
-
+    public void goToSignUpScreen() {
+        startActivity(new Intent(Login.this, SignUp.class));
     }
 
     @Override
-    public void onSignUpSuccess() {
-
+    public void goToForgotPasswordScreen() {
+        startActivity(new Intent(Login.this, ForgotPassword.class));
     }
 
-    @Override
-    public void onForgotPasswordFailed() {
 
-    }
-
-    @Override
-    public void onForgotPasswordSuccess() {
-
-    }
 }
