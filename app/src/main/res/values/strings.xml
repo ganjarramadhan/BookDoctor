@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">Book Doctor</string>
 
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_login">Login</string>
     <string name="email_address_label">Email Address:</string>
     <string name="password_label">Password:</string>
@@ -29,4 +27,46 @@
     <string name="choose_date_label">Choose Date:</string>
     <string name="choose_time">Choose Time:</string>
     <string name="book_now">Book Now</string>
+    <string name="available_day">Available Day:</string>
+    <string name="loading">Processing. Please wait...</string>
+    <string name="booking_failed_message">Can\'t connect to server to get doctor\'s schedule</string>
+    <string name="please_select_date_time">Please select date and time to book a schedule</string>
+    <string name="please_select_date">Please select a date before set time.</string>
+    <string name="not_login_message">To make a booking you have to logged in</string>
+    <string name="user_not_logged_in">User Not Logged In</string>
+    <string name="login_failed_message">Login failed. Please check your email and password</string>
+    <string name="logout">Logout</string>
+    <string name="profile">Profile</string>
+    <string name="history">History</string>
+    <string name="logout_success">Logout success...</string>
+    <string name="first_name">First Name:</string>
+    <string name="last_name">Last Name:</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="confirm_cancel_booking_message">Are you sure want to cancel booking?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel_success">Cancel success</string>
+    <string name="doctor_dont_have_booking_history_message">You don\'t have any booking history yet</string>
+
+    <string-array name="time_array">
+        <item>09:00 - 10:00</item>
+        <item>10:00 - 11:00</item>
+        <item>11:00 - 12:00</item>
+        <item>12:00 - 13:00</item>
+        <item>13:00 - 14:00</item>
+        <item>14:00 - 15:00</item>
+        <item>15:00 - 16:00</item>
+    </string-array>
+
+    <string-array name="day_name">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
 </resources>

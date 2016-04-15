@@ -12,4 +12,8 @@ public interface HistoryInterface {
     void onLoadHistorySuccess(List<Booking> listBooking);
     void onLoadHistoryFailed(String message);
 
+    void onCancelBooking(Booking booking);
+    void onCancelBookingSuccess(Booking booking);
+    void onCancelBookingFailed(String message);
+
 }

@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide;
 import com.ganjarramadhan.bookdoctor.R;
 import com.ganjarramadhan.bookdoctor.module.dashboard.presenter.listener.OnUserListItemClick;
 import com.ganjarramadhan.bookdoctor.pojo.User;
+import com.ganjarramadhan.bookdoctor.util.AppsConstant;
 
 import java.util.List;
 
@@ -19,14 +20,14 @@ import de.hdodenhof.circleimageview.CircleImageView;
 /**
  * Created by ganjarramadhan on 4/11/16.
  */
-public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ViewHolderContent> {
+public class DoctorListAdapter extends RecyclerView.Adapter<DoctorListAdapter.ViewHolderContent> {
 
     private List<User> listUser;
     private OnUserListItemClick onClickListener;
     private Activity activity;
 
-    public UserListAdapter(Activity activity, List<User> listUser,
-                           OnUserListItemClick onClickListener){
+    public DoctorListAdapter(Activity activity, List<User> listUser,
+                             OnUserListItemClick onClickListener){
         this.listUser = listUser;
         this.activity = activity;
         this.onClickListener = onClickListener;
@@ -44,9 +45,20 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ViewHo
 
         holder.mItem = listUser.get(position);
 
-        Glide.with(activity).load(holder.mItem.getAvatarUrl())
+        Glide.with(activity).load(AppsConstant.BASE_DOCTOR_IMAGE_URL + holder.mItem.getAvatarUrl())
                 .into(holder.mImgAvatar);
-        holder.mNameView.setText(holder.mItem.getFullName());
+        holder.mNameView.setText(holder.mItem.getFirstName() + " " + holder.mItem.getLastName());
+        if (holder.mItem.getType() == User.GROUP_DOCTOR) {
+            holder.mLabel.setText("Available Day: ");
+            String dayName = "";
+            for (Integer day : holder.mItem.getListAvailableDays()){
+                dayName += (activity.getResources().getStringArray(R.array.day_name))[day-1] + ", ";
+            }
+
+            holder.mDateDay.setText(dayName);
+        } else {
+            holder.mLabel.setText("Time: ");
+        }
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +79,8 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ViewHo
         public final View mView;
         public final CircleImageView mImgAvatar;
         public final TextView mNameView;
+        public final TextView mLabel;
+        public final TextView mDateDay;
         public User mItem;
 
         public ViewHolderContent(View view) {
@@ -74,6 +88,8 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ViewHo
             mView = view;
             mImgAvatar = (CircleImageView) view.findViewById(R.id.adapter_user_list_civ_avatar);
             mNameView = (TextView) view.findViewById(R.id.adapter_user_list_tv_name);
+            mLabel = (TextView) view.findViewById(R.id.adapter_user_list_tv_label);
+            mDateDay = (TextView) view.findViewById(R.id.adapter_user_list_tv_available_day);
         }
 
         @Override

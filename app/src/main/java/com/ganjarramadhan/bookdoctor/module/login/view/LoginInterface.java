@@ -8,7 +8,7 @@ import com.ganjarramadhan.bookdoctor.pojo.User;
 public interface LoginInterface {
 
     void onLoginFailed(String message);
-    void onLoginSuccess();
+    void onLoginSuccess(User user);
     void goToSignUpScreen();
     void goToForgotPasswordScreen();
 

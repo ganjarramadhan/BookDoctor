@@ -1,6 +1,8 @@
 package com.ganjarramadhan.bookdoctor.module.history.model;
 
+import com.ganjarramadhan.bookdoctor.module.history.presenter.listener.OnCancelBookingListener;
 import com.ganjarramadhan.bookdoctor.module.history.presenter.listener.OnLoadHistoryFinishedListener;
+import com.ganjarramadhan.bookdoctor.pojo.Booking;
 import com.ganjarramadhan.bookdoctor.pojo.User;
 
 /**
@@ -9,5 +11,6 @@ import com.ganjarramadhan.bookdoctor.pojo.User;
 public interface HistoryModelInterface {
 
     void loadHistoryData(User user, OnLoadHistoryFinishedListener listener);
+    void cancelBooking(Booking booking, OnCancelBookingListener listener);
 
 }

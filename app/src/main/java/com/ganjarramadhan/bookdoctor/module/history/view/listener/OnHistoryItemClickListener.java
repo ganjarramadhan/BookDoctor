@@ -9,5 +9,6 @@ import com.ganjarramadhan.bookdoctor.pojo.Booking;
 public interface OnHistoryItemClickListener {
 
     void onListBookingItemClicked(Booking booking);
+    void onBtnCancelBookingClicked(Booking booking);
 
 }

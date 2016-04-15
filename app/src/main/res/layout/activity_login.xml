@@ -22,6 +22,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_login" />
+    <include android:id="@+id/activity_login_layout_content" layout="@layout/content_login" />
+    <include android:id="@+id/activity_login_layout_loading" layout="@layout/layout_loading" />
 
 </android.support.design.widget.CoordinatorLayout>

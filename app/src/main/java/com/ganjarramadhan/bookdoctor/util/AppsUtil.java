@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.content.CursorLoader;
+import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Window;
@@ -39,6 +40,13 @@ import javax.crypto.spec.SecretKeySpec;
  * Created by ganjarramadhan on 4/9/16.
  */
 public class AppsUtil {
+
+    public static AlertDialog showLoadingDialog(Context context, int theme, int layoutLoading){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, theme);
+        builder.setView(layoutLoading);
+        builder.setCancelable(false);
+        return builder.create();
+    }
 
     public static void saveToPreference(Context context, String prefsFileName, String prefName, String prefValue) {
 

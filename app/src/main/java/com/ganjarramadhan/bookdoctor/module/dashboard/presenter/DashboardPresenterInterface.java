@@ -1,5 +1,7 @@
 package com.ganjarramadhan.bookdoctor.module.dashboard.presenter;
 
+import android.content.Context;
+
 import com.ganjarramadhan.bookdoctor.pojo.User;
 
 import java.util.List;
@@ -9,7 +11,10 @@ import java.util.List;
  */
 public interface DashboardPresenterInterface {
 
-    void loadUsers();
+    void loadUsers(Context context);
     void goToLogin();
+
+    User getLoggedInUser(Context context);
+    void userLogout(Context context);
 
 }

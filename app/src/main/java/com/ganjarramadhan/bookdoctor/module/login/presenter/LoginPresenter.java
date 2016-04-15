@@ -1,5 +1,7 @@
 package com.ganjarramadhan.bookdoctor.module.login.presenter;
 
+import android.content.Context;
+
 import com.ganjarramadhan.bookdoctor.module.login.model.LoginModel;
 import com.ganjarramadhan.bookdoctor.module.login.presenter.listener.OnForgotPasswordFinishedListener;
 import com.ganjarramadhan.bookdoctor.module.login.presenter.listener.OnLoginFinishedListener;
@@ -24,8 +26,8 @@ public class LoginPresenter implements LoginPresenterInterface, OnLoginFinishedL
     }
 
     @Override
-    public void onLoginClicked(String email, String password) {
-        model.checkUser(email, password, this);
+    public void onLoginClicked(Context context, String email, String password) {
+        model.checkUser(context, email, password, this);
     }
 
     @Override
@@ -40,7 +42,8 @@ public class LoginPresenter implements LoginPresenterInterface, OnLoginFinishedL
 
     @Override
     public void onLoginSuccess(User user) {
-        if (view.get() != null) view.get().onLoginSuccess();
+
+        if (view.get() != null) view.get().onLoginSuccess(user);
     }
 
     @Override

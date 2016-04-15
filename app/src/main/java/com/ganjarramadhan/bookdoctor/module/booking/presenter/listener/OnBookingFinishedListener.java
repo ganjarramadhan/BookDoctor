@@ -1,6 +1,7 @@
 package com.ganjarramadhan.bookdoctor.module.booking.presenter.listener;
 
-import com.ganjarramadhan.bookdoctor.module.booking.view.Booking;
+
+import com.ganjarramadhan.bookdoctor.pojo.Booking;
 
 /**
  * Created by ganjarramadhan on 4/11/16.

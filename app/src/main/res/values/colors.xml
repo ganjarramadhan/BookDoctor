@@ -10,5 +10,6 @@
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
     <color name="black_overlay">#66000000</color>
+    <color name="grey">#9E9E9E</color>
 
 </resources>

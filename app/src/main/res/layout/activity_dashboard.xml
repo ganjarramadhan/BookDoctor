@@ -22,6 +22,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_dashboard" />
+    <include android:id="@+id/layout_content_dashboard" layout="@layout/content_dashboard"/>
+    <include android:id="@+id/layout_loading_dashboard" layout="@layout/layout_loading" />
 
 </android.support.design.widget.CoordinatorLayout>

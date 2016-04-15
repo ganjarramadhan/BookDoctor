@@ -4,6 +4,8 @@ import com.google.gson.annotations.SerializedName;
 
 import org.parceler.Parcel;
 
+import java.util.List;
+
 /**
  * Created by ganjarramadhan on 4/9/16.
  */
@@ -11,10 +13,10 @@ import org.parceler.Parcel;
 @Parcel
 public class User {
 
-    public static final String TYPE_DOCTOR = "doctor";
-    public static final String TYPE_CUSTOMER = "customer";
+    public static final int GROUP_DOCTOR = 3;
+    public static final int GROUP_CUSTOMER = 4;
 
-    @SerializedName("id")
+    @SerializedName("user_id")
     int id;
 
     @SerializedName("email")
@@ -22,22 +24,29 @@ public class User {
 
     String password;
 
-    @SerializedName("full_name")
-    String fullName;
+    @SerializedName("first_name")
+    String firstName;
 
-    @SerializedName("avatar_url")
+    @SerializedName("last_name")
+    String lastName;
+
+    @SerializedName("avatar")
     String avatarUrl;
 
-    @SerializedName("type")
-    String type;
+    @SerializedName("group_id")
+    int type;
+
+    @SerializedName("schedule")
+    List<Integer> listAvailableDays;
 
     public User() {
     }
 
-    public User(int id, String email, String fullName, String avatarUrl, String type) {
+    public User(int id, String email, String firstName, String lastName, String avatarUrl, int type) {
         this.id = id;
         this.email = email;
-        this.fullName = fullName;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.avatarUrl = avatarUrl;
         this.type = type;
     }
@@ -66,12 +75,20 @@ public class User {
         this.password = password;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getAvatarUrl() {
@@ -82,12 +99,19 @@ public class User {
         this.avatarUrl = avatarUrl;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 
+    public List<Integer> getListAvailableDays() {
+        return listAvailableDays;
+    }
+
+    public void setListAvailableDays(List<Integer> listAvailableDays) {
+        this.listAvailableDays = listAvailableDays;
+    }
 }

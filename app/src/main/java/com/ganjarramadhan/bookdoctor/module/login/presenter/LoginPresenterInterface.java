@@ -1,5 +1,7 @@
 package com.ganjarramadhan.bookdoctor.module.login.presenter;
 
+import android.content.Context;
+
 import com.ganjarramadhan.bookdoctor.pojo.User;
 
 /**
@@ -7,7 +9,7 @@ import com.ganjarramadhan.bookdoctor.pojo.User;
  */
 public interface LoginPresenterInterface {
 
-    void onLoginClicked(String email, String password);
+    void onLoginClicked(Context context, String email, String password);
     void onSignUpClicked();
     void onForgotPasswordClicked();
 

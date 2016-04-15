@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_loading_root"
+    android:orientation="vertical"
+    android:paddingTop="40dp"
+    android:paddingBottom="40dp"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+        android:id="@+id/layout_loading_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        custom:amount="5"
+        custom:duration="@android:integer/config_mediumAnimTime"
+        custom:endColor="@color/colorPrimary"
+        custom:startColor="@color/colorAccent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/loading"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layout_loading_dot"
+        android:id="@+id/layout_loading_label" />
+
+</LinearLayout>

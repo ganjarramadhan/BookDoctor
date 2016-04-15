@@ -3,34 +3,90 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp"
-    android:elevation="5dp">
+    android:layout_marginBottom="10dp"
+    android:elevation="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:orientation="vertical">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/adapter_user_list_civ_avatar"
-            android:layout_width="128dp"
-            android:layout_height="128dp"
-            android:src="@drawable/ic_stethoscope_green"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@color/colorAccent"
-            android:layout_gravity="center"/>
-
-        <TextView
-            android:id="@+id/adapter_user_list_tv_name"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="2"
-            android:textColor="@color/colorPrimaryDark"
-            android:text="@string/app_name"
-            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/adapter_user_list_civ_avatar"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/ic_stethoscope_green"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorAccent"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/adapter_user_list_tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/app_name"
+                    android:layout_marginTop="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:id="@+id/adapter_user_list_tv_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/available_day"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:id="@+id/adapter_user_list_tv_available_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="@string/available_day" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/adapter_user_list_btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:theme="@style/CancelButton"
+            android:visibility="gone"
+            android:text="@string/cancel"/>
+
+        <TextView
+            android:id="@+id/adapter_user_list_tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/status_background"
+            android:textColor="@color/black"
+            android:padding="10dp"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+            android:visibility="gone"
+            android:text="@string/cancel"/>
 
     </LinearLayout>
 
